@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>SOCINT: Evaluating Social Intelligence in Large Language Models</title>
+  <title>SocialBench++: Evaluating Social Intelligence in Large Language Models</title>
   <meta name="description" content="SOCINT introduces a benchmark for evaluating the social intelligence of LLMs across reasoning, empathy, and relationship dimensions.">
-  <meta name="author" content="Zhao Xiao, Li Ming, Wang Yue">
+  <meta name="author" content="Huang Shuai, Zhao Wenxuan, Gao Jun">
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -16,7 +15,19 @@
     .hero { padding: 3rem 1.5rem; }
     .button.is-dark { margin-right: 10px; }
     .benchmark-img { max-width: 800px; margin: 2rem auto; display: block; border-radius: 8px; }
-    .citation-box { background: #f8f8f8; padding: 1rem; border-radius: 6px; font-family: monospace; }
+    .citation-box { background: #f8f8f8; padding: 1rem; border-radius: 6px; font-family: monospace; position: relative; }
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: #666;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+    .copy-btn:hover { color: #111; }
     footer { margin-top: 4rem; font-size: 0.9rem; color: #555; }
   </style>
 </head>
@@ -24,11 +35,14 @@
 <body>
   <section class="hero is-light">
     <div class="hero-body has-text-centered">
-      <h1 class="title is-1">SOCINT: Evaluating Social Intelligence in Large Language Models</h1>
-      <p class="is-size-5 mt-3">Zhao Xiao, Li Ming, Yue Wang</p>
+      <h1 class="title is-1">SocialBench++: Evaluating Social Intelligence in Large Language Models</h1>
+      <p class="is-size-5 mt-3">Huang Shuai, Zhao Wenxuan, Gao Jun</p>
       <p class="is-size-6">AI Interaction Lab, ACL 2025</p>
 
       <div class="mt-4">
+        <a href="https://arxiv.org/abs/2501.12345" target="_blank" class="button is-dark is-rounded">
+          <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+        </a>
         <a href="static/pdfs/socint.pdf" target="_blank" class="button is-dark is-rounded">
           <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
         </a>
@@ -49,21 +63,35 @@
     <div class="container">
       <h2 class="title is-4">Citation</h2>
       <div class="citation-box">
-<pre>
-@article{zhao2025socint,
-  title={SOCINT: Evaluating Social Intelligence in Large Language Models},
-  author={Zhao, Xiao and Li, Ming and Wang, Yue},
+        <button id="copyBtn" class="copy-btn" title="Copy to clipboard">
+          <i class="fas fa-copy"></i>
+        </button>
+<pre id="bibtex-code"><code>@article{zhao2025socint,
+  title={SocialBench++: Evaluating Social Intelligence in Large Language Models},
+  author={Huang, Shuai Zhao, Wenxuan and Gao, Jun},
   journal={Proceedings of ACL},
   year={2025},
   url={https://zhaoxiao-ai.github.io/SOCINT}
-}
-</pre>
+}</code></pre>
       </div>
     </div>
   </section>
 
   <footer class="has-text-centered">
-    © 2025 AI Interaction Lab. Built with ❤️ using Bulma.
+    © 2025 Hello Group. All rights reserved.
   </footer>
+
+  <script>
+    const copyBtn = document.getElementById("copyBtn");
+    const code = document.getElementById("bibtex-code").innerText;
+
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(code);
+      copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+      setTimeout(() => {
+        copyBtn.innerHTML = '<i class="fas fa-copy"></i>';
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
