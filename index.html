@@ -37,9 +37,10 @@
 <body>
   <section class="hero is-light">
     <div class="hero-body has-text-centered">
-      <h1 class="title is-1">SocialBench++: Evaluating Social Intelligence in Large Language Models</h1>
-      <p class="is-size-5 mt-3">Huang Shuai, Zhao Wenxuan, Gao Jun</p>
-      <p class="is-size-6">AI Interaction Lab, ACL 2025</p>
+      <h1 class="title is-1">SI-Bench: Benchmarking Social Intelligence of Large Language Models in Human-to-Human Conversations</h1>
+      <p class="is-size-5 mt-3">Shuai Huang, Wenxuan Zhao, Jun Gao</p>
+      <p class="is-size-5 mt-3">Hello Group</p>
+      <p class="is-size-5 mt-3">{huang.shuai, zhao.wenxuan, gao.jun}@hellogroup.com</p>
 
       <div class="mt-4">
         <a href="https://arxiv.org/abs/2501.12345" target="_blank" class="button is-dark is-rounded">
@@ -48,13 +49,31 @@
         <a href="static/pdfs/socint.pdf" target="_blank" class="button is-dark is-rounded">
           <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
         </a>
-        <a href="https://github.com/zhaoxiao-ai/SOCINT" target="_blank" class="button is-dark is-rounded">
+        <a href="https://github.com/SI-Bench/SI-Bench" target="_blank" class="button is-dark is-rounded">
           <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
         </a>
       </div>
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content is-size-5">
+        <p>
+          As large language models (LLMs) develop anthropomorphic abilities, they are increasingly being deployed as autonomous agents to interact with humans. 
+          However, evaluating their performance in realistic and complex social interactions remains a significant challenge. Most previous research built datasets 
+          through simulated agent-to-agent interactions, which fails to capture the authentic linguistic styles and relational dynamics found in real human conversations. 
+          To address this gap, we introduce SI-Bench, a novel benchmark designed to evaluate aspects of social intelligence in LLMs. Grounded in broad social science theories, 
+          SI-Bench contains 2,221 authentic multi-turn dialogues collected from a social networking application. We further selected a subset of 312 dialogues for manual annotation 
+          across 8 major models. The experiments show that SOTA models have surpassed the human expert in process reasoning under complex social situations, 
+          yet they still fall behind humans in reply quality. Moreover, introducing Chain-of-Thought (CoT) reasoning may degrade the performance of LLMs in social dialogue tasks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
   <section class="section has-text-centered">
     <h2 class="title is-3">Benchmark Overview</h2>
     <img src="static/images/benchmark.png" alt="Benchmark Results" class="benchmark-img">
