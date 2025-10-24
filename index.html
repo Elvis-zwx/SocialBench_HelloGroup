@@ -43,9 +43,9 @@
       <p class="is-size-5 mt-3">{huang.shuai, zhao.wenxuan, gao.jun}@hellogroup.com</p>
 
       <div class="mt-4">
-        <a href="https://arxiv.org/abs/2501.12345" target="_blank" class="button is-dark is-rounded">
+        <!-- <a href="https://arxiv.org/abs/2501.12345" target="_blank" class="button is-dark is-rounded">
           <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
-        </a>
+        </a> -->
         <a href="static/pdfs/socint.pdf" target="_blank" class="button is-dark is-rounded">
           <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
         </a>
@@ -75,10 +75,145 @@
 
   
   <section class="section has-text-centered">
-    <!-- <h2 class="title is-3">Benchmark Overview</h2> -->
+    <h2 class="title is-3">Benchmark Overview</h2>
     <img src="static/images/sibench-main.png" alt="Benchmark Results" class="benchmark-img">
-    <p class="is-size-5 mt-2">Overview of the SI-Bench framework.</p>
+    <p class="is-size-5 mt-2">A sample model response.</p>
   </section>
+
+  <!-- <section class="section has-text-centered">
+    <h2 class="title is-3">Performance Results</h2>
+    <img src="static/images/performance-results.png" alt="Performance Results" class="benchmark-img">
+    <p class="is-size-5 mt-2">Human and LLMs performance on different dimensions. Green represents the best-performing models, while red represents a winning rate below 50%</p>
+  </section> -->
+
+  <section class="section has-text-centered">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Performance Results.</h2>
+      <div class="table-container">
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th><strong>Model</strong></th>
+              <th><strong>Motivation</strong></th>
+              <th><strong>Cause</strong></th>
+              <th><strong>Emotional<br>Attitude</strong></th>
+              <th><strong>Social<br>Intention</strong></th>
+              <th><strong>Communicative<br>Strategy</strong></th>
+              <th><strong>Reply CoT</strong></th>
+              <th><strong>Reply Direct</strong></th>
+              <th><strong>CoT Win Rate</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Claude-4-Opus</td>
+              <td>7.62</td>
+              <td>7.57</td>
+              <td>8.95</td>
+              <td>7.47</td>
+              <td>6.80</td>
+              <td>5.32</td>
+              <td>5.28</td>
+              <td class="has-text-danger"><strong>37.8%</strong></td>
+            </tr>
+            <tr>
+              <td>Claude-4-Sonnet</td>
+              <td>7.50</td>
+              <td>7.28</td>
+              <td>8.90</td>
+              <td>7.85</td>
+              <td>7.37</td>
+              <td>5.07</td>
+              <td>5.37</td>
+              <td class="has-text-danger"><strong>31.2%</strong></td>
+            </tr>
+            <tr>
+              <td>Doubao-1.5-Pro-Character</td>
+              <td>2.63</td>
+              <td>2.63</td>
+              <td>4.61</td>
+              <td>6.51</td>
+              <td>6.25</td>
+              <td>4.63</td>
+              <td>5.00</td>
+              <td class="has-text-danger"><strong>33.1%</strong></td>
+            </tr>
+            <tr>
+              <td>Doubao-Seed-1.6</td>
+              <td>5.97</td>
+              <td>6.05</td>
+              <td>7.24</td>
+              <td>6.54</td>
+              <td>6.28</td>
+              <td>5.06</td>
+              <td>5.47</td>
+              <td class="has-text-danger"><strong>32.9%</strong></td>
+            </tr>
+            <tr>
+              <td>Qwen-2.5-Max</td>
+              <td>5.20</td>
+              <td>5.15</td>
+              <td>7.15</td>
+              <td>7.35</td>
+              <td class="has-background-success-light"><strong>7.69</strong></td>
+              <td>4.85</td>
+              <td>4.47</td>
+              <td class="has-text-danger"><strong>39.0%</strong></td>
+            </tr>
+            <tr>
+              <td>GPT-4o</td>
+              <td>5.63</td>
+              <td>5.72</td>
+              <td>7.65</td>
+              <td>7.03</td>
+              <td>7.06</td>
+              <td>5.07</td>
+              <td>4.54</td>
+              <td class="has-text-danger"><strong>48.6%</strong></td>
+            </tr>
+            <tr>
+              <td>Gemini-2.5-Flash</td>
+              <td>5.66</td>
+              <td>6.49</td>
+              <td>7.93</td>
+              <td>7.57</td>
+              <td>7.01</td>
+              <td>4.56</td>
+              <td>4.61</td>
+              <td class="has-text-danger"><strong>33.2%</strong></td>
+            </tr>
+            <tr>
+              <td>Gemini-2.5-Pro</td>
+              <td class="has-background-success-light"><strong>8.04</strong></td>
+              <td class="has-background-success-light"><strong>8.01</strong></td>
+              <td class="has-background-success-light"><strong>9.06</strong></td>
+              <td class="has-background-success-light"><strong>8.22</strong></td>
+              <td>6.99</td>
+              <td>5.73</td>
+              <td>5.94</td>
+              <td class="has-text-danger"><strong>37.6%</strong></td>
+            </tr>
+            <tr>
+              <td>Human</td>
+              <td>5.68</td>
+              <td>5.41</td>
+              <td>6.99</td>
+              <td>7.68</td>
+              <td>7.11</td>
+              <td class="has-background-success-light"><strong>6.13</strong></td>
+              <td class="has-background-success-light"><strong>6.40</strong></td>
+              <td class="has-text-danger"><strong>43.4%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="is-size-6 has-text-centered mt-3">
+        <span class="has-background-success-light px-2 py-1">Green</span> represents the best-performing models, while 
+        <span class="has-text-danger">red</span> represents a winning rate below 50%.
+      </p>
+    </div>
+  </section>
+
 
   <section class="section">
     <div class="container">
