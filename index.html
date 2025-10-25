@@ -66,6 +66,13 @@
     .table tbody td:first-child {
       text-align: left !important;
     }
+    
+    /* Table width control */
+    .table-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
   </style>
 </head>
 
@@ -121,7 +128,7 @@
     <div class="container">
       <h2 class="title is-3 has-text-centered">Performance Results</h2>
       <div class="table-container">
-        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <table class="table is-bordered is-striped is-narrow is-hoverable">
           <thead>
             <tr>
               <th><strong>Model</strong></th>
