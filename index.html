@@ -45,6 +45,27 @@
     }
     .copy-btn:hover { color: #111; }
     footer { margin-top: 4rem; font-size: 0.9rem; color: #555; }
+    
+    /* Abstract section styling */
+    .abstract-container {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .abstract-text {
+      text-align: justify;
+      hyphens: auto;
+    }
+    
+    /* Table header styling */
+    .table thead th {
+      text-align: center !important;
+    }
+    
+    /* First column (Model names) left align */
+    .table tbody td:first-child {
+      text-align: left !important;
+    }
   </style>
 </head>
 
@@ -73,8 +94,9 @@
   <section class="section">
     <div class="container">
       <h2 class="title is-3 has-text-centered">Abstract</h2>
-      <div class="content is-size-5">
-        <p>
+      <div class="abstract-container">
+        <div class="content is-size-5">
+          <p class="abstract-text">
           As large language models (LLMs) develop anthropomorphic abilities, they are increasingly being deployed as autonomous agents to interact with humans. 
           However, evaluating their performance in realistic and complex social interactions remains a significant challenge. Most previous research built datasets 
           through simulated agent-to-agent interactions, which fails to capture the authentic linguistic styles and relational dynamics found in real human conversations. 
@@ -82,7 +104,8 @@
           SI-Bench contains 2,221 authentic multi-turn dialogues collected from a social networking application. We further selected a subset of 312 dialogues for manual annotation 
           across 8 major models. The experiments show that SOTA models have surpassed the human expert in process reasoning under complex social situations, 
           yet they still fall behind humans in reply quality. Moreover, introducing Chain-of-Thought (CoT) reasoning may degrade the performance of LLMs in social dialogue tasks.
-        </p>
+          </p>
+        </div>
       </div>
     </div>
   </section>
